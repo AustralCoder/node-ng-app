@@ -1,4 +1,4 @@
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 import { Consultas } from './../models/consultas';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -20,7 +20,7 @@ export class ConsultaService {
 
 
     guardarConsulta(consulta: Consultas): Observable<any>{
-      return this.http.post("https://app-node-ng-kelly.herokuapp.com/api/", consulta);
+      return this.http.post(this.URL, consulta);
     }
 
     
