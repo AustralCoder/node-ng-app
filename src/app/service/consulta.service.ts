@@ -20,7 +20,7 @@ export class ConsultaService {
 
 
     guardarConsulta(consulta: Consultas): Observable<any>{
-      return this.http.post(this.URL, consulta);
+      return this.http.post("https://app-node-ng-kelly.herokuapp.com/api/", consulta);
     }
 
     
