@@ -1,4 +1,4 @@
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.prod';
 import { Consultas } from './../models/consultas';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class ConsultaService {
 
-   URL: string = 'https://app-node-ng-kelly.herokuapp.com/api';
+  //  URL: string = 'https://app-node-ng-kelly.herokuapp.com/api/';
 
-    // URL = environment.URL
+    URL = environment.URL
   constructor(
     private http: HttpClient
   ) {
